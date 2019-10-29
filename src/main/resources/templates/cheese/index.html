@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${titles}">Title</title>
+</head>
+<body>
+    <h1 th:text="${title}">Default Title</h1>
+<!--    <h2 th:text="${titles}"></h2>-->
+    <h2>This is a test</h2>
+<p th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</p>
+
+<a href ="/cheese/add">Add Your Cheese</a>
+
+<ul>
+    <li th:each="cheese : ${cheeses}" th:text="${cheese}"></li>
+</ul>
+</body>
+</html>
